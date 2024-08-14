@@ -1,0 +1,35 @@
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Ошибка: Деление на ноль!"
+    return x / y
+
+def calculator():
+    print("Простой калькулятор на Python")
+    print("-----------------------------")
+
+    num1 = float(input("Введите первое число: "))
+    operation = input("Введите оператор (+, -, *, /): ")
+    num2 = float(input("Введите второе число: "))
+
+    if operation == '+':
+        print(f"Результат: {num1} + {num2} = {add(num1, num2)}")
+    elif operation == '-':
+        print(f"Результат: {num1} - {num2} = {subtract(num1, num2)}")
+    elif operation == '*':
+        print(f"Результат: {num1} * {num2} = {multiply(num1, num2)}")
+    elif operation == '/':
+        print(f"Результат: {num1} / {num2} = {divide(num1, num2)}")
+    else:
+        print("Ошибка: Неверный оператор.")
+
+if __name__ == "__main__":
+    calculator()
